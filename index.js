@@ -91,7 +91,7 @@ function checkLeapYear(year) {
 // Take input vlue
 checkLeapYear(2004);
 
-// ============= Hidden Millionaire Calculator Start ============== //
+// ============= Hidden Millionaire Calculator End ============== //
 
 
 
