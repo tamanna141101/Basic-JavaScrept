@@ -16,18 +16,61 @@ function budgetCalculator(computer, watch, coffee) {
     }
 
 }
-// take input
+// Take input Value
 budgetCalculator(1, 1, 1) // quantity of product
 
 // ============= Budget Calculator End  ============== //
 
 
-
-
 // ============= Search Product Start ============== //
+
+//Product Details in Array
+var products = [
+    {
+        id: 1,
+        title: "laptop",
+        price: 567,
+        description: "Laptop Lorem ipsum dolor sit amet consectetur adipiscing elit, magna etiam fermentum accumsan rhoncus ullamcorper"
+    },
+    {
+        id: 2,
+        title: "Mobile",
+        price: 367,
+        description: "Mobile Lorem ipsum dolor sit amet consectetur adipiscing elit, magna etiam fermentum accumsan rhoncus ullamcorper"
+    },
+    {
+        id: 3,
+        title: "Watch",
+        price: 180,
+        description: "Watch Lorem ipsum dolor sit amet consectetur adipiscing elit, magna etiam fermentum accumsan rhoncus ullamcorper"
+    },
+    {
+        id: 4,
+        title: "Coffee",
+        price: 40,
+        description: "Coffee Lorem ipsum dolor sit amet consectetur adipiscing elit, magna etiam fermentum accumsan rhoncus ullamcorper"
+    },
+
+];
+
+// search product by name
+
+function findProduct(productName) {
+    var found = -1;
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].title.toLocaleLowerCase() === productName.toLocaleLowerCase()) {
+            found = products[i];
+            break;
+        }
+    }
+    return found;
+}
+
+// Take input value
+console.log(findProduct("LapToP"))
+
+
 // ============= Search Product End  ============== //
-
-
 
 
 // ============= Hidden Millionaire Calculator Start ============== //
@@ -45,7 +88,7 @@ function checkLeapYear(year) {
     }
 }
 
-// take input
+// Take input vlue
 checkLeapYear(2004);
 
 // ============= Hidden Millionaire Calculator Start ============== //
