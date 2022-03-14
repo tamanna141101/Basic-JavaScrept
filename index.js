@@ -56,21 +56,19 @@ var products = [
 // search product by name
 
 function findProduct(productName) {
-    var found;
+    var found = "Not Found";
     for (var i = 0; i < products.length; i++) {
         if (products[i].title.toLocaleLowerCase() === productName.toLocaleLowerCase()) {
             found = products[i];
             break;
         }
-        else {
-            found = "Not Found"
-        }
+        
     }
     return found;
 }
 
 // Take input value
-console.log(findProduct("watch"))
+console.log(findProduct("kkkkkk"))
 
 
 // ============= Search Product End  ============== //
